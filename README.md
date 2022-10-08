@@ -1,16 +1,16 @@
 # tatware_test
 
-A new Flutter project.
+A Ui Flutter Project for Tatware Company as an interview Assessment 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Using With Xd File.
 
-A few resources to get you started if this is your first Flutter project:
+# Screen Record
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  <img src="https://user-images.githubusercontent.com/95647394/194714495-ae10ef40-41b2-44c0-925d-5ed597879113.mp4" width="300">
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
+
