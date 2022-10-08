@@ -57,7 +57,6 @@ class ChatItem extends StatelessWidget {
                   heightFactor: 1,
                   child: Text(
                     chatMessage.text,
-
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         fontSize: AppSizes.textSize14,
                         color: (chatMessage.isSent)

@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:tatware_test/utilities/app_sizes.dart';
 
 class AppElevatedButton extends StatelessWidget {
-  const AppElevatedButton({Key? key, required this.text, required this.onPressed}) : super(key: key);
+  const AppElevatedButton(
+      {Key? key, required this.text, required this.onPressed})
+      : super(key: key);
 
   final String text;
   final VoidCallback onPressed;

@@ -69,7 +69,7 @@ class GetStartPage extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.symmetric(
-                horizontal: AppSizes.getCustomHorizontalPadding(context,0.25),
+                horizontal: AppSizes.getCustomHorizontalPadding(context, 0.25),
               ),
               child: AppElevatedButton(
                 text: AppStrings.next,

@@ -69,5 +69,4 @@ class AppSizes {
 
   // duration
   static const int duration200 = 200;
-
 }
