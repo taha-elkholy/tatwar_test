@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tatware_test/presentation/widgets/app_elevated_button.dart';
-import 'package:tatware_test/presentation/widgets/locale_widget.dart';
+import 'package:tatware_test/presentation/pages/start/widgets/locale_widget.dart';
 import 'package:tatware_test/utilities/app_sizes.dart';
 import 'package:tatware_test/utilities/app_strings.dart';
 import 'package:tatware_test/utilities/router/app_routes.dart';

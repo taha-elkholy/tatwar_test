@@ -46,7 +46,6 @@ class AppSizes {
   static const double chatItemMinHeight = 48.0;
   static const double horizontalListHeight = 120.0;
   static const double cardHeight = 242.0;
-  static const double cardWidth = 185.0;
 
   // images
   static const double pathWidth = 236.0;
@@ -62,7 +61,8 @@ class AppSizes {
 
   // Radius
   static const double radius8 = 8.0;
-  static const double radius20 = 20.0;
+  static const double radius12 = 12.0;
+  static const double radius30 = 30.0;
 
   // Stroke Thickness
   static const double stroke05 = 0.5;

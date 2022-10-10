@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tatware_test/presentation/home_layout.dart';
-import 'package:tatware_test/presentation/pages/chat_page.dart';
-import 'package:tatware_test/presentation/pages/get_start_page.dart';
-import 'package:tatware_test/presentation/pages/start_page.dart';
+import 'package:tatware_test/presentation/pages/chat/chat_page.dart';
+import 'package:tatware_test/presentation/pages/start/get_start_page.dart';
+import 'package:tatware_test/presentation/pages/start/start_page.dart';
 import 'package:tatware_test/utilities/router/app_routes.dart';
 
 Route<dynamic>? onGenerateRoute(RouteSettings settings) {

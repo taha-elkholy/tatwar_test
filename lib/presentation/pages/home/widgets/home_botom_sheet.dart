@@ -5,36 +5,29 @@ import 'package:tatware_test/utilities/app_sizes.dart';
 import 'package:tatware_test/utilities/app_strings.dart';
 
 class HomeBottomSheet extends StatelessWidget {
-  const HomeBottomSheet({Key? key, required this.scrollController})
-      : super(key: key);
-  final ScrollController scrollController;
+  const HomeBottomSheet({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return BottomSheet(
-      onClosing: () {},
-      builder: (context) => ListView(
-        padding: const EdgeInsets.all(AppSizes.padding8),
-        controller: scrollController,
-        children: [
-          const SizedBox(
-            height: AppSizes.space40,
-            child: Padding(
-              padding: EdgeInsets.all(AppSizes.space16),
-              child: Align(
-                alignment: Alignment.topCenter,
-                child: SizedBox(
-                  width: AppSizes.bottomSheetIndicatorWidth,
-                  height: AppSizes.bottomSheetIndicatorHeight,
-                  child: ColoredBox(color: AppColors.lightGreyColor2),
-                ),
-              ),
-            ),
+    return DraggableScrollableSheet(
+      initialChildSize: 0.1,
+      minChildSize: 0.1,
+      maxChildSize: 0.75,
+      builder: (context, controller) => DecoratedBox(
+        decoration: const BoxDecoration(
+          color: AppColors.whiteColor,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(AppSizes.radius30),
+            topRight: Radius.circular(AppSizes.radius30),
           ),
-          Expanded(
-            child: ListView.separated(
-              primary: false,
-              shrinkWrap: true,
+        ),
+        child: Stack(
+          alignment: Alignment.topCenter,
+          children: [
+            ListView.separated(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: AppSizes.padding8, vertical: AppSizes.padding16),
+              controller: controller,
               itemBuilder: (context, index) =>
                   _JobItem(job: AppStrings.jobs[index]),
               separatorBuilder: (context, index) => const SizedBox(
@@ -42,8 +35,21 @@ class HomeBottomSheet extends StatelessWidget {
               ),
               itemCount: AppStrings.jobs.length,
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: AppSizes.padding8, bottom: AppSizes.padding16),
+              child: SizedBox(
+                width: AppSizes.bottomSheetIndicatorWidth,
+                height: AppSizes.bottomSheetIndicatorHeight,
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                      color: AppColors.scrollableSheetIndicatorColor,
+                      borderRadius: BorderRadius.circular(AppSizes.radius12)),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tatware_test/presentation/pages/home/widgets/home_botom_sheet.dart';
 import 'package:tatware_test/presentation/pages/home/widgets/online_experts_widget.dart';
 import 'package:tatware_test/presentation/pages/home/widgets/recommended_experts_widget.dart';
-import 'package:tatware_test/presentation/widgets/app_divider.dart';
 import 'package:tatware_test/presentation/widgets/title_widget.dart';
 import 'package:tatware_test/utilities/app_sizes.dart';
 import 'package:tatware_test/utilities/app_strings.dart';
@@ -39,35 +38,21 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: Stack(
+        fit: StackFit.expand,
         children: [
-          Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const AppDivider(),
-              Expanded(
-                child: ListView(
-                    physics: const BouncingScrollPhysics(),
-                    padding: const EdgeInsets.all(AppSizes.padding16),
-                    children: [
-                      RecommendedExpertsWidget(
-                        experts: AppStrings.experts,
-                      ),
-                      const SizedBox(
-                        height: AppSizes.space50,
-                      ),
-                      OnlineExpertsWidget(names: AppStrings.names)
-                    ]),
-              ),
-            ],
-          ),
-          DraggableScrollableSheet(
-              expand: true,
-              initialChildSize: 0.12,
-              minChildSize: 0.12,
-              maxChildSize: 0.7,
-              builder: (context, scrollController) => HomeBottomSheet(
-                    scrollController: scrollController,
-                  ))
+          ListView(
+              physics: const BouncingScrollPhysics(),
+              padding: const EdgeInsets.all(AppSizes.padding16),
+              children: [
+                RecommendedExpertsWidget(
+                  experts: AppStrings.experts,
+                ),
+                const SizedBox(
+                  height: AppSizes.space40,
+                ),
+                OnlineExpertsWidget(names: AppStrings.names)
+              ]),
+          const HomeBottomSheet(),
         ],
       ),
     );

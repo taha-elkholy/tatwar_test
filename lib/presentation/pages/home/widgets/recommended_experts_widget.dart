@@ -38,7 +38,7 @@ class RecommendedExpertsWidget extends StatelessWidget {
           shrinkWrap: true,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              childAspectRatio: 0.7,
+              childAspectRatio: 0.75,
               crossAxisSpacing: AppSizes.space8,
               mainAxisSpacing: AppSizes.space8),
           itemBuilder: (context, index) =>

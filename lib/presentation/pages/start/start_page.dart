@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tatware_test/presentation/pages/start/widgets/locale_widget.dart';
 import 'package:tatware_test/presentation/widgets/app_elevated_button.dart';
-import 'package:tatware_test/presentation/widgets/locale_widget.dart';
 import 'package:tatware_test/presentation/widgets/title_widget.dart';
 import 'package:tatware_test/utilities/app_colors.dart';
 import 'package:tatware_test/utilities/app_sizes.dart';
@@ -14,7 +14,6 @@ class StartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar(),
       body: Stack(
         alignment: Alignment.center,
         children: [

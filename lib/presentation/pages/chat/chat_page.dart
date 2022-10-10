@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tatware_test/presentation/widgets/app_divider.dart';
-import 'package:tatware_test/presentation/widgets/chat_item.dart';
+import 'package:tatware_test/presentation/pages/chat/widgets/chat_item.dart';
 import 'package:tatware_test/utilities/app_colors.dart';
 import 'package:tatware_test/utilities/app_sizes.dart';
 import 'package:tatware_test/utilities/app_strings.dart';
@@ -28,9 +28,7 @@ class ChatPage extends StatelessWidget {
                       ),
                   itemCount: AppStrings.messages.length),
             ),
-            const Center(
-              child: RadioButtonGroup(),
-            ),
+            const RadioButtonGroup(),
             const AppDivider(),
             const _ChatTextField()
           ],

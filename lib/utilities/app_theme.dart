@@ -6,15 +6,16 @@ import 'package:tatware_test/utilities/app_sizes.dart';
 class AppTheme {
   static ThemeData appThemeLight = ThemeData(
     primaryColor: AppColors.primaryColor,
-    appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.transparent,
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.whiteColor,
       centerTitle: true,
-      elevation: AppSizes.zeroElevation,
-      titleTextStyle: TextStyle(
+      elevation: AppSizes.elevation4,
+      shadowColor: AppColors.blackColor.withOpacity(0.25),
+      titleTextStyle: const TextStyle(
           color: AppColors.blackColor,
           fontSize: AppSizes.textSize18,
           fontWeight: FontWeight.bold),
-      systemOverlayStyle: SystemUiOverlayStyle(
+      systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
           statusBarIconBrightness: Brightness.dark),
     ),
@@ -63,8 +64,8 @@ class AppTheme {
       backgroundColor: AppColors.whiteColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(AppSizes.radius20),
-          topRight: Radius.circular(AppSizes.radius20),
+          topLeft: Radius.circular(AppSizes.radius30),
+          topRight: Radius.circular(AppSizes.radius30),
         ),
       ),
     ),

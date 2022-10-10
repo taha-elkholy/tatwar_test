@@ -12,4 +12,5 @@ class AppColors {
   static const Color lightGreyColor2 = Color(0xff999999);
   static const Color inActiveCheckColor = Color(0xffcfd9de);
   static const Color circularAvatarColor = Color(0xffdfe8eb);
+  static const Color scrollableSheetIndicatorColor = Color(0xffD8D8D8);
 }
